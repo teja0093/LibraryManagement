@@ -1,0 +1,119 @@
+/* ================= Library Management: ONE CSS FILE ================= */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
+  background-size: 400% 400%;
+  animation: bg 14s ease infinite;
+}
+
+@keyframes bg {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+/* ---------- Card (used on every page) ---------- */
+.glass {
+  background: rgba(255, 255, 255, .93);
+  border-radius: 24px;
+  padding: 40px 35px;
+  max-width: 480px;          /* Add and Edit pages */
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+  animation: fadeUp .7s ease;
+}
+.glass.home { max-width: 520px; text-align: center; }   /* Home page */
+.glass.wide { max-width: 950px; }                       /* View page */
+
+/* ---------- Headings ---------- */
+.title {
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #667eea, #f5576c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.big-icon {
+  font-size: 70px;
+  color: #764ba2;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ---------- Buttons ---------- */
+.btn-grad {
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 13px 22px;
+  border-radius: 14px;
+  transition: .25s;
+}
+.btn-grad:hover {
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+}
+.b1 { background: linear-gradient(90deg, #667eea, #764ba2); }
+.b2 { background: linear-gradient(90deg, #f5576c, #f093fb); }
+.b3 { background: linear-gradient(90deg, #38b2ac, #667eea); }
+
+/* ---------- Form fields ---------- */
+.input-group-text {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+}
+.form-control { border: 2px solid #e2e8f0; padding: 12px; }
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, .2);
+}
+
+/* ---------- Table (View page) ---------- */
+table { border-radius: 14px; overflow: hidden; box-shadow: 0 5px 20px rgba(0, 0, 0, .1); }
+thead th {
+  background: linear-gradient(90deg, #667eea, #764ba2) !important;
+  color: #fff !important;
+  padding: 14px 10px;
+}
+tbody td { padding: 12px 10px; vertical-align: middle; }
+tbody tr:hover td { background: #e9e4ff; }
+.price { font-weight: 700; color: #38a169; }
+
+.btn-edit, .btn-del {
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 13px;
+}
+.btn-edit { background: linear-gradient(90deg, #38b2ac, #4fd1c5); }
+.btn-del  { background: linear-gradient(90deg, #f5576c, #ff8a80); }
+.btn-edit:hover, .btn-del:hover { color: #fff; transform: scale(1.08); }
+
+/* ---------- Small extras ---------- */
+.chip {
+  display: inline-block;
+  background: #eef0ff;
+  color: #667eea;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin: 3px;
+}
